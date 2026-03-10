@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart — PageTurn Bookstore</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-header">
+  <div class="container page-header-content">
+    <div class="page-header-eyebrow">YOUR SELECTION</div>
+    <h1>Shopping Cart</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Cart</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Checkout steps indicator -->
+    <div style="display:flex;align-items:center;gap:0;margin-bottom:48px;max-width:480px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.8rem;font-weight:700">1</div>
+        <span style="font-weight:600;font-size:.95rem">Cart</span>
+      </div>
+      <div style="flex:1;height:2px;background:var(--cream);margin:0 12px"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--cream);color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.8rem">2</div>
+        <span style="color:var(--muted);font-size:.95rem">Checkout</span>
+      </div>
+      <div style="flex:1;height:2px;background:var(--cream);margin:0 12px"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--cream);color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.8rem">3</div>
+        <span style="color:var(--muted);font-size:.95rem">Confirmation</span>
+      </div>
+    </div>
+
+    <div id="cartContent"></div>
+
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

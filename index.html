@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageTurn Bookstore — Discover Your Next Great Read</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-dot"></div>
+      NEW ARRIVALS EVERY WEEK
+    </div>
+    <h1>Discover Your<br><em>Next Great</em><br>Read</h1>
+    <p class="hero-desc">
+      Thousands of books across every genre — from timeless classics to modern bestsellers.
+      Curated for the curious mind, delivered to your door.
+    </p>
+    <div class="hero-btns">
+      <a class="btn btn-gold" href="catalog.html">
+        <i class="fa-solid fa-book-open"></i> Browse Books
+      </a>
+      <a class="btn btn-outline-gold" href="catalog.html?badge=new">
+        New Arrivals
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val">12,000+</div>
+        <div class="hero-stat-lbl">Books Available</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">48K</div>
+        <div class="hero-stat-lbl">Happy Readers</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">4.9★</div>
+        <div class="hero-stat-lbl">Average Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating books -->
+  <div class="hero-visual">
+    <div class="hero-book hb1">
+      <div class="hero-book-title">The Midnight Library</div>
+    </div>
+    <div class="hero-book hb2">
+      <div class="hero-book-title">Atomic Habits</div>
+    </div>
+    <div class="hero-book hb3">
+      <div class="hero-book-title">Clean Code</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CATEGORIES ══ -->
+<div class="categories-strip">
+  <div class="container">
+    <div class="categories-row" id="catRow"></div>
+  </div>
+</div>
+
+<!-- ══ FEATURED BOOKS ══ -->
+<section class="section" style="background: var(--parchment);">
+  <div class="container">
+    <div class="section-eyebrow">Handpicked For You</div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px;">
+      <div>
+        <h2 class="section-title">Featured Books</h2>
+        <p class="section-desc">Our editors' top picks this week across all genres.</p>
+      </div>
+      <a class="btn btn-outline-gold btn-sm" href="catalog.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="books-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ══ PROMO BANNER ══ -->
+<section class="section" style="background: var(--cream); padding-top:0;">
+  <div class="container">
+    <div class="promo-banner">
+      <div>
+        <div class="promo-eyebrow">⚡ Flash Sale — This Week Only</div>
+        <h2 class="promo-title">Up to 40% Off<br>Technology Books</h2>
+        <p class="promo-desc">Level up your skills with our handpicked collection of programming, design, and engineering titles at unbeatable prices.</p>
+        <a class="btn btn-gold" href="catalog.html?cat=Technology">
+          <i class="fa-solid fa-bolt"></i> Shop the Sale
+        </a>
+      </div>
+      <div style="text-align:center;">
+        <div class="promo-discount">40% OFF</div>
+        <p style="color:rgba(255,255,255,.4);font-size:.85rem;margin-top:8px;">Use code: <span style="color:var(--gold);font-family:'DM Mono',monospace">TECH40</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BESTSELLERS ══ -->
+<section class="section" style="background: var(--parchment);">
+  <div class="container">
+    <div class="section-eyebrow">Trending Now</div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px;">
+      <div>
+        <h2 class="section-title">Bestsellers</h2>
+        <p class="section-desc">The books everyone is reading right now.</p>
+      </div>
+      <a class="btn btn-outline-gold btn-sm" href="catalog.html">See More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="books-grid" id="bestsellerGrid"></div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="section" style="background: var(--cream);">
+  <div class="container">
+    <div class="section-eyebrow">Reader Reviews</div>
+    <h2 class="section-title" style="margin-bottom:36px;">What Readers Say</h2>
+    <div class="testimonials-grid" id="testimonialsGrid"></div>
+  </div>
+</section>
+
+<!-- ══ NEWSLETTER ══ -->
+<section class="section-sm" style="background: var(--parchment);">
+  <div class="container">
+    <div class="newsletter">
+      <div class="section-eyebrow" style="margin-bottom:8px;">Stay in the Loop</div>
+      <h2>Get Weekly Book Recommendations</h2>
+      <p>Join 48,000+ readers who get our curated picks every Friday morning.</p>
+      <div class="newsletter-form">
+        <input class="newsletter-input" id="nlEmail" type="email" placeholder="your@email.com">
+        <button class="btn btn-gold" id="nlBtn">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

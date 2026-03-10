@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Sign Up — PageTurn Bookstore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <section class="auth-page">
+      <div class="auth-page-bg"></div>
+      <div class="auth-glow auth-glow-1"></div>
+      <div class="auth-glow auth-glow-2"></div>
+
+      <div class="auth-box">
+        <div class="auth-logo-row">
+          <div class="auth-logo-icon">📚</div>
+          <h2 class="auth-box-title">Welcome to PageTurn</h2>
+          <p class="auth-box-sub">Your curated bookstore experience</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="tabLogin">Login</button>
+          <button class="auth-tab" id="tabSignup">Sign Up</button>
+        </div>
+
+        <!-- ── LOGIN PANEL ── -->
+        <div class="auth-panel active" id="panelLogin">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-envelope input-icon"></i>
+              <input
+                class="form-input with-icon"
+                type="email"
+                id="loginEmail"
+                placeholder="your@email.com"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input
+                class="form-input with-icon"
+                type="password"
+                id="loginPassword"
+                placeholder="Enter password"
+                autocomplete="current-password"
+              />
+              <button class="toggle-pw" id="toggleLoginPw" type="button">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="auth-error d-none" id="loginError"></div>
+          <button
+            class="btn btn-dark btn-full"
+            id="loginBtn"
+            style="margin-top: 4px"
+          >
+            Login <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <p class="auth-switch">
+            Don't have an account? <span id="switchToSignup">Sign up free</span>
+          </p>
+        </div>
+
+        <!-- ── SIGNUP PANEL ── -->
+        <div class="auth-panel" id="panelSignup">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input
+                  class="form-input with-icon"
+                  type="text"
+                  id="signupFirst"
+                  placeholder="Ahmed"
+                  autocomplete="given-name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="signupLast"
+                placeholder="Khan"
+                autocomplete="family-name"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-envelope input-icon"></i>
+              <input
+                class="form-input with-icon"
+                type="email"
+                id="signupEmail"
+                placeholder="your@email.com"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input
+                class="form-input with-icon"
+                type="password"
+                id="signupPassword"
+                placeholder="Min 6 characters"
+                autocomplete="new-password"
+              />
+              <button class="toggle-pw" id="toggleSignupPw" type="button">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Confirm Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input
+                class="form-input with-icon"
+                type="password"
+                id="signupConfirm"
+                placeholder="Repeat password"
+                autocomplete="new-password"
+              />
+            </div>
+          </div>
+          <div class="auth-error d-none" id="signupError"></div>
+          <div class="auth-success d-none" id="signupSuccess"></div>
+          <button class="btn btn-gold btn-full" id="signupBtn">
+            Create Account <i class="fa-solid fa-rocket"></i>
+          </button>
+          <p class="auth-switch">
+            Already have an account? <span id="switchToLogin">Login</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

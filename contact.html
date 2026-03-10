@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — PageTurn Bookstore</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-header">
+  <div class="container page-header-content">
+    <div class="page-header-eyebrow">WE'D LOVE TO HEAR FROM YOU</div>
+    <h1>Get in Touch</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Contact</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- ── INFO CARD ── -->
+      <div>
+        <div class="contact-info-card">
+          <h2>Let's Talk Books</h2>
+          <p>Have a question about an order, need a recommendation, or just want to talk books? We're here for you.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+              <div class="contact-info-val">hello@pageturn.books</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:3px">We reply within 24 hours</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="contact-info-label">Call Us</div>
+              <div class="contact-info-val">+92 300 123 4567</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:3px">Mon–Sat, 9am–6pm PKT</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="contact-info-label">Visit Our Store</div>
+              <div class="contact-info-val">12 Library Road, Gulberg</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:3px">Lahore, Punjab, Pakistan</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <div class="contact-info-label">Store Hours</div>
+              <div class="contact-info-val">Mon–Fri: 10am – 8pm</div>
+              <div style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:3px">Saturday: 11am – 6pm</div>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div style="margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08)">
+            <div style="font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px">Follow Our Journey</div>
+            <div style="display:flex;gap:10px">
+              <a class="footer-social" href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a class="footer-social" href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a class="footer-social" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="footer-social" href="#"><i class="fa-brands fa-goodreads"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div style="margin-top:24px">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;">Quick FAQ</h3>
+          <div id="faqList"></div>
+        </div>
+      </div>
+
+      <!-- ── FORM CARD ── -->
+      <div class="contact-form-card">
+        <h3>Send Us a Message</h3>
+
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input class="form-input" id="contactName" placeholder="Ahmed Khan" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" id="contactEmail" type="email" placeholder="your@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <select class="form-select" id="contactSubject">
+            <option value="">Select a subject...</option>
+            <option>Order Status / Tracking</option>
+            <option>Return / Refund Request</option>
+            <option>Book Recommendation</option>
+            <option>Account Issue</option>
+            <option>Bulk / Corporate Orders</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" id="contactMessage" rows="5" placeholder="Tell us how we can help you..."></textarea>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+          <input type="checkbox" id="newsletter" style="accent-color:var(--gold);width:16px;height:16px">
+          <label for="newsletter" style="font-size:.93rem;color:var(--muted);cursor:pointer">Subscribe to our weekly book recommendations newsletter</label>
+        </div>
+
+        <button class="btn btn-gold btn-full" id="sendBtn">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+
+        <div style="text-align:center;margin-top:16px;font-size:.83rem;color:var(--muted)">
+          We typically respond within 24 hours on business days.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map placeholder -->
+    <div style="margin-top:60px;background:var(--ink);border-radius:var(--r-lg);height:280px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative">
+      <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(201,168,76,.06) 40px,rgba(201,168,76,.06) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(201,168,76,.06) 40px,rgba(201,168,76,.06) 41px)"></div>
+      <div style="text-align:center;color:#fff;position:relative;z-index:2">
+        <div style="font-size:2.5rem;margin-bottom:12px">📍</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:6px">PageTurn Bookstore</div>
+        <div style="color:rgba(255,255,255,.5);font-size:.9rem">12 Library Road, Gulberg, Lahore</div>
+        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-gold btn-sm" style="margin-top:16px;display:inline-flex">
+          <i class="fa-solid fa-map-location-dot"></i> Open in Maps
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Detail — PageTurn Bookstore</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-header" id="pageHeader">
+  <div class="container page-header-content">
+    <div class="page-header-eyebrow" id="headerEyebrow">BOOK DETAILS</div>
+    <h1 id="headerTitle">Loading...</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="catalog.html">Catalog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span id="breadcrumbTitle">Book</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div id="detailContent"></div>
+  </div>
+</section>
+
+<!-- Related Books -->
+<section class="section" style="background:var(--cream);padding-top:0;" id="relatedSection">
+  <div class="container">
+    <div class="section-eyebrow">You Might Also Like</div>
+    <h2 class="section-title" style="margin-bottom:32px;">Related Books</h2>
+    <div class="books-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/book-detail.js"></script>
+</body>
+</html>

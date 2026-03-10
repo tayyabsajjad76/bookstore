@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Books — PageTurn Bookstore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container page-header-content">
+        <div class="page-header-eyebrow">BROWSE THE COLLECTION</div>
+        <h1>Book Catalog</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Catalog</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <!-- Search bar -->
+        <div class="catalog-search-bar">
+          <i class="fa-solid fa-magnifying-glass catalog-search-icon"></i>
+          <input
+            class="catalog-search-input"
+            id="searchInput"
+            placeholder="Search by title, author, or keyword..."
+          />
+        </div>
+
+        <div class="catalog-layout">
+          <!-- ── SIDEBAR FILTERS ── -->
+          <aside class="catalog-sidebar">
+            <div class="sidebar-section">
+              <div class="sidebar-title">Category</div>
+              <div id="catFilters"></div>
+            </div>
+
+            <div class="sidebar-section">
+              <div class="sidebar-title">Price Range</div>
+              <input
+                type="range"
+                class="price-range"
+                id="priceRange"
+                min="0"
+                max="60"
+                value="60"
+                step="1"
+              />
+              <div class="price-labels">
+                <span>$0</span>
+                <span id="priceLabel">Up to $60</span>
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <div class="sidebar-title">Minimum Rating</div>
+              <div id="ratingFilters"></div>
+            </div>
+
+            <div class="sidebar-section">
+              <div class="sidebar-title">Badge</div>
+              <label class="filter-option">
+                <input type="checkbox" id="filterNew" /> New Arrivals
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" id="filterSale" /> On Sale
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" id="filterBest" /> Bestsellers
+              </label>
+            </div>
+
+            <button
+              class="btn btn-outline-gold btn-sm btn-full"
+              id="clearFilters"
+            >
+              <i class="fa-solid fa-rotate-left"></i> Clear Filters
+            </button>
+          </aside>
+
+          <!-- ── CATALOG MAIN ── -->
+          <div>
+            <div class="catalog-header">
+              <div class="catalog-count">
+                Showing <span id="bookCount">0</span> books
+              </div>
+              <select class="sort-select" id="sortSelect">
+                <option value="default">Sort by: Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="reviews">Most Reviewed</option>
+                <option value="title">Title A–Z</option>
+              </select>
+            </div>
+
+            <div class="books-grid" id="catalogGrid"></div>
+
+            <div class="empty-state" id="emptyState" style="display: none">
+              <div class="empty-icon">📭</div>
+              <h3>No books found</h3>
+              <p>
+                Try adjusting your filters or search term to find what you're
+                looking for.
+              </p>
+              <button class="btn btn-gold btn-sm" id="resetBtn">
+                Reset Filters
+              </button>
+            </div>
+
+            <!-- Pagination -->
+            <div
+              id="pagination"
+              style="
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                margin-top: 40px;
+                flex-wrap: wrap;
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/catalog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout — PageTurn Bookstore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div class="page-header">
+      <div class="container page-header-content">
+        <div class="page-header-eyebrow">ALMOST THERE</div>
+        <h1>Checkout</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="cart.html">Cart</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Checkout</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <!-- Steps -->
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-bottom: 48px;
+            max-width: 480px;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 8px">
+            <div
+              style="
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background: var(--sage);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9rem;
+              "
+            >
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span style="color: var(--muted); font-size: 0.95rem">Cart</span>
+          </div>
+          <div
+            style="
+              flex: 1;
+              height: 2px;
+              background: var(--gold);
+              margin: 0 12px;
+            "
+          ></div>
+          <div style="display: flex; align-items: center; gap: 8px">
+            <div
+              style="
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background: var(--gold);
+                color: var(--ink);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 0.8rem;
+                font-weight: 700;
+              "
+            >
+              2
+            </div>
+            <span style="font-weight: 600; font-size: 0.95rem">Checkout</span>
+          </div>
+          <div
+            style="
+              flex: 1;
+              height: 2px;
+              background: var(--cream);
+              margin: 0 12px;
+            "
+          ></div>
+          <div style="display: flex; align-items: center; gap: 8px">
+            <div
+              style="
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background: var(--cream);
+                color: var(--muted);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 0.8rem;
+              "
+            >
+              3
+            </div>
+            <span style="color: var(--muted); font-size: 0.95rem"
+              >Confirmation</span
+            >
+          </div>
+        </div>
+
+        <div class="checkout-layout">
+          <!-- ── LEFT: Forms ── -->
+          <div>
+            <!-- Contact -->
+            <div class="checkout-card">
+              <div class="checkout-card-title">
+                <div class="checkout-card-num">1</div>
+                Contact Information
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input
+                    class="form-input"
+                    id="firstName"
+                    placeholder="Ahmed"
+                    autocomplete="given-name"
+                  />
+                  <div class="form-error" id="firstNameErr">
+                    Please enter your first name.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input
+                    class="form-input"
+                    id="lastName"
+                    placeholder="Khan"
+                    autocomplete="family-name"
+                  />
+                  <div class="form-error" id="lastNameErr">
+                    Please enter your last name.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input
+                  class="form-input"
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  autocomplete="email"
+                />
+                <div class="form-error" id="emailErr">
+                  Please enter a valid email.
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input
+                  class="form-input"
+                  id="phone"
+                  type="tel"
+                  placeholder="+92 300 1234567"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <!-- Shipping -->
+            <div class="checkout-card">
+              <div class="checkout-card-title">
+                <div class="checkout-card-num">2</div>
+                Shipping Address
+              </div>
+              <div class="form-group">
+                <label class="form-label">Street Address</label>
+                <input
+                  class="form-input"
+                  id="address"
+                  placeholder="123 Book Street, Apt 4B"
+                  autocomplete="street-address"
+                />
+                <div class="form-error" id="addressErr">
+                  Please enter your address.
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">City</label>
+                  <input
+                    class="form-input"
+                    id="city"
+                    placeholder="Lahore"
+                    autocomplete="address-level2"
+                  />
+                  <div class="form-error" id="cityErr">
+                    Please enter your city.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Postal Code</label>
+                  <input
+                    class="form-input"
+                    id="postal"
+                    placeholder="54000"
+                    autocomplete="postal-code"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Country</label>
+                  <select
+                    class="form-select"
+                    id="country"
+                    autocomplete="country"
+                  >
+                    <option>Pakistan</option>
+                    <option>India</option>
+                    <option>Bangladesh</option>
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>UAE</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">State / Province</label>
+                  <input class="form-input" id="state" placeholder="Punjab" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="checkout-card">
+              <div class="checkout-card-title">
+                <div class="checkout-card-num">3</div>
+                Payment Method
+              </div>
+
+              <div class="payment-options" id="paymentOptions">
+                <div class="payment-option selected" data-method="card">
+                  <div class="payment-option-icon">💳</div>
+                  Credit / Debit Card
+                </div>
+                <div class="payment-option" data-method="bank">
+                  <div class="payment-option-icon">🏦</div>
+                  Bank Transfer
+                </div>
+                <div class="payment-option" data-method="cash">
+                  <div class="payment-option-icon">💰</div>
+                  Cash on Delivery
+                </div>
+              </div>
+
+              <!-- Card fields -->
+              <div id="cardFields">
+                <div class="form-group">
+                  <label class="form-label">Card Number</label>
+                  <div style="position: relative">
+                    <input
+                      class="form-input"
+                      id="cardNumber"
+                      placeholder="1234 5678 9012 3456"
+                      maxlength="19"
+                      autocomplete="cc-number"
+                    />
+                    <span
+                      style="
+                        position: absolute;
+                        right: 14px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 1.1rem;
+                      "
+                      >💳</span
+                    >
+                  </div>
+                  <div class="form-error" id="cardErr">
+                    Please enter a valid card number.
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">Expiry Date</label>
+                    <input
+                      class="form-input"
+                      id="cardExpiry"
+                      placeholder="MM / YY"
+                      maxlength="7"
+                      autocomplete="cc-exp"
+                    />
+                    <div class="form-error" id="expiryErr">
+                      Enter a valid expiry date.
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">CVV</label>
+                    <input
+                      class="form-input"
+                      id="cardCvv"
+                      placeholder="123"
+                      maxlength="4"
+                      autocomplete="cc-csc"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Name on Card</label>
+                  <input
+                    class="form-input"
+                    id="cardName"
+                    placeholder="AHMED KHAN"
+                    autocomplete="cc-name"
+                  />
+                </div>
+              </div>
+
+              <!-- Bank fields -->
+              <div id="bankFields" style="display: none">
+                <div
+                  style="
+                    background: var(--cream);
+                    border-radius: var(--r);
+                    padding: 20px;
+                    font-size: 0.95rem;
+                    color: var(--ink-muted);
+                  "
+                >
+                  <p style="font-weight: 600; margin-bottom: 12px">
+                    Bank Transfer Details
+                  </p>
+                  <p><strong>Bank:</strong> HBL Pakistan</p>
+                  <p><strong>Account:</strong> 0012345678901</p>
+                  <p><strong>Branch:</strong> Main Branch, Lahore</p>
+                  <p style="margin-top: 10px; font-size: 0.88rem">
+                    Transfer your total amount and include your order number as
+                    reference. Order will be processed within 1 business day.
+                  </p>
+                </div>
+              </div>
+
+              <!-- COD fields -->
+              <div id="cashFields" style="display: none">
+                <div
+                  style="
+                    background: var(--cream);
+                    border-radius: var(--r);
+                    padding: 20px;
+                    font-size: 0.95rem;
+                    color: var(--ink-muted);
+                  "
+                >
+                  <p style="font-weight: 600; margin-bottom: 8px">
+                    Cash on Delivery
+                  </p>
+                  <p>
+                    Pay when your books arrive at your doorstep. Our delivery
+                    partner will collect the exact amount. Please keep cash
+                    ready.
+                  </p>
+                  <p
+                    style="
+                      margin-top: 10px;
+                      color: var(--rust);
+                      font-size: 0.88rem;
+                    "
+                  >
+                    ⚠ COD available within Pakistan only. Additional ₹50 COD
+                    handling fee applies.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-gold btn-full"
+              id="placeOrderBtn"
+              style="font-size: 1.1rem; padding: 16px"
+            >
+              <i class="fa-solid fa-lock"></i> Place Order Securely
+            </button>
+            <div
+              style="
+                text-align: center;
+                color: var(--muted);
+                font-size: 0.83rem;
+                margin-top: 10px;
+              "
+            >
+              🔒 256-bit SSL encryption · Your data is safe
+            </div>
+          </div>
+
+          <!-- ── RIGHT: Order Summary ── -->
+          <div>
+            <div class="order-summary">
+              <div class="summary-title">Your Order</div>
+              <div id="summaryItems"></div>
+              <div class="summary-divider"></div>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span id="summaryShipping">$0.00</span>
+              </div>
+              <div
+                class="summary-row"
+                style="color: var(--sage)"
+                id="summaryFreeShip"
+                style="display: none"
+              >
+                <span>🎉 Free Shipping!</span><span></span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span id="summaryTotal">$0.00</span>
+              </div>
+              <div
+                style="
+                  margin-top: 20px;
+                  padding: 14px;
+                  background: var(--cream);
+                  border-radius: var(--r);
+                  font-size: 0.85rem;
+                  color: var(--muted);
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <i class="fa-solid fa-truck" style="color: var(--sage)"></i>
+                  <span
+                    >Estimated delivery:
+                    <strong style="color: var(--ink)"
+                      >3–5 business days</strong
+                    ></span
+                  >
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center">
+                  <i
+                    class="fa-solid fa-rotate-left"
+                    style="color: var(--gold)"
+                  ></i>
+                  <span>30-day return policy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust badges -->
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                margin-top: 16px;
+              "
+            >
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  text-align: center;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                  font-size: 0.82rem;
+                  color: var(--muted);
+                "
+              >
+                <div style="font-size: 1.3rem; margin-bottom: 6px">🔒</div>
+                Secure Payment
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  text-align: center;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                  font-size: 0.82rem;
+                  color: var(--muted);
+                "
+              >
+                <div style="font-size: 1.3rem; margin-bottom: 6px">↩️</div>
+                Easy Returns
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  text-align: center;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                  font-size: 0.82rem;
+                  color: var(--muted);
+                "
+              >
+                <div style="font-size: 1.3rem; margin-bottom: 6px">📦</div>
+                Fast Delivery
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  text-align: center;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                  font-size: 0.82rem;
+                  color: var(--muted);
+                "
+              >
+                <div style="font-size: 1.3rem; margin-bottom: 6px">💬</div>
+                24/7 Support
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-modal">
+        <div class="success-icon">✓</div>
+        <h2>Order Placed!</h2>
+        <p>
+          Your books are on their way. You'll receive a confirmation email
+          shortly.
+        </p>
+        <div class="order-id" id="orderId">Order #PT-00000</div>
+        <div
+          style="font-size: 0.9rem; color: var(--muted); margin-bottom: 28px"
+        >
+          Estimated delivery: <strong>3–5 business days</strong>
+        </div>
+        <a class="btn btn-gold btn-full" href="index.html">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+        <a
+          class="btn btn-outline-gold btn-full"
+          href="catalog.html"
+          style="margin-top: 10px"
+        >
+          Continue Shopping
+        </a>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
